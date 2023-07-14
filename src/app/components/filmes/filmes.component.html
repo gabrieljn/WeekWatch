@@ -1,0 +1,21 @@
+<div class="tool-label">
+  <p-button icon="pi pi-arrow-left" routerLink="/"
+    styleClass="p-button-rounded p-button-text p-button-raised"></p-button>
+</div>
+
+<div class="principal">
+  <div class="card-container">
+    <div class="ui-g-10" *ngFor="let filme of filmes">
+      <p-card class="ui-g" header="{{ filme.title }}" [style]="{ width: '425px', height:'450px' }">
+        <p-scrollPanel id="teste" [style]="{width: '100%', height: '110px'}">
+          <p>
+            {{ filme.overview }}
+          </p>
+        </p-scrollPanel>
+        <ng-template pTemplate="header">
+          <img *ngIf="imagens" id="img-card" alt="Card" [src]="imagens[filmes.indexOf(filme)]" />
+        </ng-template>
+      </p-card>
+    </div>
+  </div>
+</div>

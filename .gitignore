@@ -1,0 +1,10 @@
+/dist/
+/node_modules/
+/coverage/
+/e2e/*.js
+.angular/
+
+/src/environments/environment*.ts
+
+/package-lock.json
+/yarn.lock
